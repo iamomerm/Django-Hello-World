@@ -1,4 +1,4 @@
-#### <ins>What is Django ?</ins>
+### <ins>What is Django ?</ins>
 Django is an Open-Source Python Web Framework <br>
 Popular applications that uses Django: Instagram, Pinterest, Bitbucket, Udemy, Mozilla and more <br>
 Website: https://www.djangoproject.com/
@@ -13,7 +13,7 @@ Website: https://www.djangoproject.com/
 2. Performance: Django is not as fast as other frameworks like Flask
 3. May not be the best choice for small projects
 
-#### <ins>Commands</ins>
+### <ins>Commands</ins>
 1. Install Django: _pip install django_
 2. Install Django Debug Toolbar: _pip install django-debug-toolbar_
 3. Create a new Django Project: _django-admin startproject project_name_
@@ -30,24 +30,24 @@ Website: https://www.djangoproject.com/
            Edge: CTRL + SHIFT + DEL <br>
            Safari: CMD + ALT + E <br>
 
-#### <ins>Run Server</ins>
+### <ins>Run Server</ins>
 `_python manage.py runserver` command is used to run the development server <br>
 Each modification will be automatically applied to the running server <br>
 Development server will be available at: _http://localhost:8000/_ by default <br>
 
-#### <ins>Project Structure</ins>
+### <ins>Project Structure</ins>
 1. _project_name_: Main project folder
 2. _app_name_: App folder
 3. _manage.py_: Command-line utility that lets you interact with Django
 4. _settings.py_: Contains all the settings for the project
 5. _urls.py_: Contains all the URL patterns for the project
 
-#### <ins>Applications</ins>
+### <ins>Applications</ins>
 Django project is a collection of applications <br>
 Applications are reusable web applications that are responsible for a single functionality (Unix Agenda: _"Do One Thing, Do It Well"_) <br>
 Each application will have its own models, views, templates, and URLs <br>
 
-#### <ins>URLs</ins>
+### <ins>URLs</ins>
 _urls.py_ file contains all the URL patterns for the project <br>
 path() function is used to define a URL pattern, it accepts 2 main arguments:
 1. Route: URL pattern (E.G. _admin/_)
@@ -96,7 +96,7 @@ def post_page(request, slug):
 ```
 
 
-#### <ins>Views</ins>
+### <ins>Views</ins>
 Views are functions that take a web request and return a web response <br>
 Each Django app will have its own views.py file, but a main views.py file can be created in the project folder <br>
 ```
@@ -119,7 +119,7 @@ urlpatterns = [
 ]
 ```
 
-#### <ins>Templates</ins>
+### <ins>Templates</ins>
 Templates are HTML files that are rendered by Django <br>
 Templates are stored in the _templates_ folder inside the app folder or the project folder <br>
 Templates directories should be added to the _TEMPLATES_ setting in _settings.py_ file <br>
@@ -156,7 +156,7 @@ def home(request):
     return render(request, 'home.html', {'name': 'John Smith'})  # Parameters: Request, Template, Context
 ```
 
-#### <ins>Static Folder</ins>
+### <ins>Static Folder</ins>
 Static files are files that are served directly to the user (E.G. CSS, JS, Images) <br>
 Static files are stored in the _static_ folder inside the app folder or the project folder <br>
 Static directories should be added to the _STATICFILES_DIRS_ setting in _settings.py_ file <br>
@@ -223,7 +223,7 @@ from django.conf.urls.static import static
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 ```
 
-#### <ins>App</ins>
+### <ins>App</ins>
 Django app is a collection of models, views, templates, and URLs <br>
 To create a new app: _python manage.py startapp app_name_ <br>
 Each app will have its own models.py, views.py, urls.py, and templates folder <br>
@@ -273,7 +273,7 @@ urlpatterns = [
 ]
 ```
 
-#### <ins>Data Models</ins>
+### <ins>Data Models</ins>
 Models are classes that represent database tables <br>
 Models are stored in the models.py file inside the app folder <br>
 Models should inherit from the _models.Model_ class <br>
@@ -364,7 +364,7 @@ _* For every change in the models.py file, a new migration should be created and
 (.venv) > python manage.py makemigrations
 (.venv) > python manage.py migrate
 ```
-#### <ins>ORM - Object-Relational Mapping</ins>
+### <ins>ORM - Object-Relational Mapping</ins>
 ORM (Object-Relational Mapping) is a programming technique that maps objects to database tables <br>
 Django ORM is used to interact with the database <br>
 ORM uses SQLite as a default database, but it can be changed to other databases like Aerospike, MySQL, PostgreSQL, MongoDB, and more <br>
@@ -410,7 +410,7 @@ def posts_list(request):
 </html>
 ```
 
-#### <ins>Admin Interface</ins>
+### <ins>Admin Interface</ins>
 Django Admin Interface is a built-in feature that allows you to manage the database <br>
 Admin Interface is available at: _http://localhost:8000/admin/_ by default <br>
 To access the Admin Interface, a superuser should be created: _python manage.py createsuperuser_ <br>
@@ -457,7 +457,7 @@ def upload_post_image(request):
         return HttpResponse('Image Uploaded Successfully')
 ```
 
-#### <ins>Users and Authentication</ins>
+### <ins>Users and Authentication</ins>
 Django provides built-in features for user authentication <br>
 Django provides built-in views for user registration, login, logout, and password reset <br>
 
