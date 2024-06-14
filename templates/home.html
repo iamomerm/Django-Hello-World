@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Django Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <script src="{% static 'script.js' %}"></script>
+</head>
+<body>
+<div>
+    <a style="text-align: center" href="/">Home</a>
+    <a style="text-align: center" href="/users/register">User Registration</a>
+    <a style="text-align: center" href="/users/login">User Login</a>
+    <a style="text-align: center" href="/posts">Posts</a>
+    <a style="text-align: center" href="/admin">Admin</a>
+</div>
+<div>
+    <h1 style="text-align: center; font-size: 12px">Hello {{ name }}</h1>
+    <h1 style="text-align: center">Django Tutorial - {{ name }}</h1>
+</div>
+</body>
+</html>
