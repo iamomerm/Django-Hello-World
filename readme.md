@@ -31,7 +31,7 @@ Website: https://www.djangoproject.com/
            Safari: CMD + ALT + E <br>
 
 ### <ins>Run Server</ins>
-`_python manage.py runserver` command is used to run the development server <br>
+`python manage.py runserver` command is used to run the development server <br>
 Each modification will be automatically applied to the running server <br>
 Development server will be available at: _http://localhost:8000/_ by default <br>
 
